@@ -9,12 +9,15 @@ zstyle ':completion:*' menu select
 zstyle ':completion::complete:*' gain-privileges 1
 zstyle ':completion:*' rehash true
 
+# PS1 as fallback
 export PS1='%F{#9ab8d7}[%n%F{#3f3f3f}@%F{#8cd0d3}%m %~]%# %f'
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh --cmd z --hook pwd)"
 
 HISTFILE=~/.histfile
 HISTCONTROL=
 HISTIGNORE=
-HISTFILESIZE=-1 # unlimited
+HISTFILESIZE=100000 # unlimited
 HISTSIZE=10000
 HISTTIMEFORMAT="%F-%R "
 SAVEHIST=10000
@@ -42,13 +45,13 @@ setopt HIST_IGNORE_SPACE
 unsetopt beep
 
 # fix broken prompt
-autoload -Uz add-zsh-hook
-
-function reset_broken_terminal () {
-	printf '%b' '\e[0m\e(B\e)0\017\e[?5l\e7\e[0;0r\e8'
-}
-
-add-zsh-hook -Uz precmd reset_broken_terminal
+# autoload -Uz add-zsh-hook
+# 
+# function reset_broken_terminal () {
+# 	printf '%b' '\e[0m\e(B\e)0\017\e[?5l\e7\e[0;0r\e8'
+# }
+# 
+# add-zsh-hook -Uz precmd reset_broken_terminal
 
 zstyle :compinstall filename '~/.zshrc'
 

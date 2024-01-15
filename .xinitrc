@@ -42,6 +42,7 @@ vmware-user
 # xterm -geometry 80x50+494+51 &
 # xterm -geometry 80x20+494-0 &
 eval $(gnome-keyring-daemon --start)
+eval $(ssh-agent)
 xrandr
 exec i3
 # exec xterm -geometry 80x66+0+0 -name login

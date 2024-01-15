@@ -1,0 +1,22 @@
+# ls
+alias ls='exa'
+alias la='ls -a --color=auto'
+alias ll='exa -lh --time-style long-iso'
+alias lla='exa -lah --time-style long-iso'
+
+# git
+alias gs='git status'
+alias gc='git commit'
+
+# docker
+alias dcud='docker-compose up -d'
+alias dcl='docker-compose logs'
+
+# gron
+alias ungron='gron --ungron'
+
+# apps
+alias cat='bat -p'
+alias zel='zellij'
+
+# alias hg='history 1 | grep -i'
