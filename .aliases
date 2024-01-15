@@ -18,5 +18,6 @@ alias ungron='gron --ungron'
 # apps
 alias cat='bat -p'
 alias zel='zellij'
+alias vim='nvim'
 
 # alias hg='history 1 | grep -i'
