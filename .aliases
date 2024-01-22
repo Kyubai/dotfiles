@@ -19,5 +19,6 @@ alias ungron='gron --ungron'
 alias cat='bat -p'
 alias zel='zellij'
 alias vim='nvim'
+alias ssh='kitten ssh'
 
 # alias hg='history 1 | grep -i'
