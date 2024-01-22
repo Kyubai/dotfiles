@@ -20,5 +20,6 @@ alias cat='bat -p'
 alias zel='zellij'
 alias vim='nvim'
 alias ssh='kitten ssh'
+alias icat='kitten icat'
 
 # alias hg='history 1 | grep -i'
