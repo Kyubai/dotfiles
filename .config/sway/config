@@ -1,5 +1,6 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
+input keyboard xkb_layout eu
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
@@ -51,10 +52,9 @@ bindsym XF86MonBrightnessDown exec "echo 10 > /sys/class/backlight/amdgpu_bl0/br
 
 # Start Applications
 # bindsym Print exec --no-startup-id flameshot gui
-bindsym Print exec --no-startup-id grim -g "$(slurp)" - | wl-copy
-# bindsym Print exec --no-startup-id ksnip
-bindsym Shift+Print exec --no-startup-id ksnip -p ~/$(/usr/bin/date '+%FT%R')screenshot
-# bindsym Shift+Print exec --no-startup-id grim -g "$(slurp)" ~/$(/usr/bin/date '+%FT%R')screenshot.png
+bindsym $mod+p exec --no-startup-id grim -g "$(slurp)" - | wl-copy
+bindsym $mod+Shift+p exec --no-startup-id grim -g "$(slurp)" ~/$(/usr/bin/date '+%FT%R')screenshot.png
+# bindsym $mod+Shift+p exec --no-startup-id ksnip -p ~/$(/usr/bin/date '+%FT%R')screenshot
 # bindsym Alt+Print exec --no-startup-id wf-recorder -g "$(slurp)" - | wl-copy
 bindsym Shift+Alt+Print exec --no-startup-id wf-recorder -g "$(slurp)" ~/(/usr/bin/date '%FT%R')recording.mp4
 
@@ -208,16 +208,11 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # bindsym $mod+Ctrl+8 move container to workspace $ws8; workspace $ws8
 
 # Open applications on specific workspaces
-# assign [class="Thunderbird"] $ws1
-# assign [class="Pale moon"] $ws2
-# assign [class="Pcmanfm"] $ws3
-# assign [class="Skype"] $ws5
 assign [class="firefox"] $ws2
 assign [class="Brave-browser"] $ws2
 assign [class="discord"] $ws5
 assign [class="Spotify"] $ws6
 assign [class="Steam"] $ws9
-assign [class="awakened-poe-trade"] $ws9
 
 # Open specific applications in floating mode
 for_window {
@@ -225,7 +220,6 @@ for_window {
   [class="Pavucontrol"] floating enable
   [class="qt5ct"] floating enable sticky enable border normal
   [class="Qtconfig-qt4"] floating enable sticky enable border normal
-  [class="awakened-poe-trade"] floating enable
   [window_role="pop-up"] floating enable
   [window_role="bubble"] floating enable
   [window_role="dialog"] floating enable

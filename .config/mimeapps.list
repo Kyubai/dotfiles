@@ -1,0 +1,10 @@
+[Default Applications]
+inode/directory=thunar.desktop
+x-scheme-handler/tg=org.telegram.desktop.desktop
+
+image/*=imv.desktop
+image/png=imv.desktop
+image/jpg=imv.desktop
+application/pdf=okularApplication_pdf.desktop
+x-scheme-handler/discord-409416265891971072=discord-409416265891971072.desktop
+
