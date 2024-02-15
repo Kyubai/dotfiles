@@ -5,7 +5,7 @@
 # PACMAN_OPTIONAL_PACKAGES="discord"
 # YAY_ESSENTIAL_PACKAGES="wl-mirror liblnk-tools-git wdisplays libcaption-git obs-replay-source brave-bin gdk-pixbuf gruvbox-dark-gtk gruvbox-dark-icons-gtk dua"
 
-APT_ESSENTIAL_PACKAGES="bat neovim"
+APT_ESSENTIAL_PACKAGES="bat neovim g++"
 CARGO_ESSENTIAL_PACKAGES="starship eza zellij"
 
 ###############################################################
