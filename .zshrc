@@ -26,7 +26,7 @@ bindkey '^[[H' beginning-of-line
 bindkey '^[[F' end-of-line
 bindkey '^[[1;5C' forward-word
 bindkey '^[[1;5D' backward-word
-bindkey '^[[A' history-beginning-search-backward
+bindkey '^[[A' history-beginning-search-backward # STRG + R
 bindkey '^[[B' history-beginning-search-forward
 bindkey '^[[3~' delete-char
 
@@ -35,8 +35,12 @@ bindkey '^[[3~' delete-char
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#f8f8f2,bg=#282a36,bold,underline"
 
-## zsh-colored-mang-pages (https://github.com/ael-code/zsh-colored-man-pages)
+## zsh-colored-man-pages (https://github.com/ael-code/zsh-colored-man-pages)
 source ~/.zsh/zsh-colored-man-pages/colored-man-pages.plugin.zsh
+
+## zsh-vim-mode (https://github.com/softmoth/zsh-vim-mode)
+VIM_MODE_VICMD_KEY='^D'
+source ~/.zsh/zsh-vim-mode/zsh-vim-mode.plugin.zsh
 
 # setopt autocd
 # this creates issues with comments
